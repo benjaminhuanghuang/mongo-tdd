@@ -1,0 +1,23 @@
+{
+  "name": "mongo-tdd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benjaminhuanghuang/mongo-tdd.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benjaminhuanghuang/mongo-tdd/issues"
+  },
+  "homepage": "https://github.com/benjaminhuanghuang/mongo-tdd#readme",
+  "dependencies": {
+    "mocha": "^3.3.0",
+    "mongoose": "^4.9.7"
+  }
+}
