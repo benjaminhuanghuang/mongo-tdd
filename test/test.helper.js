@@ -1,13 +1,19 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/user_test');
-const db = mongoose.connection
-    .once('open', () => {
-        console.log('Connected');
-    })
-    .once('error', (error) => {
-        console.warn('Warning', error);
-    });
+// ES6 promise
+mongoose.Promise = global.Promise;
+
+// Before all tests
+before((done) => {
+    mongoose.connect('mongodb://localhost/user_test');
+    mongoose.connection
+        .once('open', () => {
+           done();
+        })
+        .on('error', (error) => {
+            console.warn('Warning', error);
+        });
+});
 
 // Executed before each test
 beforeEach((done) => {
